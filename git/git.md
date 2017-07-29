@@ -63,6 +63,7 @@ commit
 
 	+ rm
 	+ stash
+		+ git stash //保存当前草稿，以便切换分支 
 
 	
 	+ reset

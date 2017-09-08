@@ -7,7 +7,7 @@
 + maven基本配置
 	+ Idea
 	+ JDK
-	+ Maven (http://maven.apache.org/download.cgi) 
+	+ Maven (http://maven.apache.org/download.cgi)
 
 2. maven概述
 
@@ -66,8 +66,8 @@
 
 
 + use idea to create a maven project
-	 
-+ pom file 
+
++ pom file
 	+ groupID
 	+ atifactId
 	+ version
@@ -110,8 +110,8 @@ change local repository
 	+ 依赖归类
 
 + 聚合与继承
-	+ 
-	+ 
+	+
+	+
 
 + 私服
 	+ 网络限制
@@ -146,3 +146,42 @@ maven 进阶
 
 + gradle
 
+
+----
+
+# maven tutorial
+
++ youtube vedio from Java Brains
+
+---
++ build tool
++ project management tool
+
++ common problems and activivties
+	+ multiple jars
+	+ dependencies and versions
+	+ project structure
+	+ building, publishing, deploying
+
++ operation
+	+ mvn archetype:generate
+		+ input gourpId
+		+ input artifactId
+	+ mvn compile
+	+ mvn package
+	+ java -cp target/demo-1.0-SNAPSHOT.jar com.b.a.App
++ understanding Archetypes and pom.xml
+	+ create project template -> folder structure
+	+ build -> pom.xml
++ archetype:generate
+	+ archetype
+		+ the type of the project
+	+ group id
+	+ artifact id
+		+ output name of jar
+	+ version
+	+ package
+
++ maven build
+	+ build lifeCycle
+	+

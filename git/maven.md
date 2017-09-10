@@ -185,3 +185,15 @@ maven 进阶
 + maven build
 	+ build lifeCycle
 	+
++ plugins with the maven compiler plugin
+	+ mvn jetty:run
+	+ <build>
+		+ <plugins>
+			+ <plugin>
+				+ gourpId
+				+ artifactId
+				+ version
+				+ configuration like <scanIntervalSeconds>5</scanIntervalSeconds>
+			+ </plugin>
+		+ </plugins>
+	+ </build>

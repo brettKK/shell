@@ -194,6 +194,7 @@ maven 进阶
 				+ artifactId
 				+ version
 				+ configuration like <scanIntervalSeconds>5</scanIntervalSeconds>
+					+ speed up your development process
 			+ </plugin>
 		+ </plugins>
 	+ </build>

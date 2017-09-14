@@ -1,9 +1,6 @@
-
-
 ### git tutorial
 
 ------
-
 git 保存的是快照；svn保存的是文件的变化
 
 -----------
@@ -24,7 +21,6 @@ commit
 -------
 
 + git 常用命令
-
 	+ init
 	+ clone
 	+ remote
@@ -48,6 +44,7 @@ commit
 
 	+ merge
 		+ git merge --abort
+		+ git merge branchname （将branchname分支合并到当前分支，主干发布，开支开发，会用到）
 	+ pull (equals fetch + merge)
 
 	+ branch

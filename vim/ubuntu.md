@@ -21,3 +21,10 @@
 	+ 每次打开shell时，被执行
 + ~/.bash_profile
 	+ 用户登陆时仅执行一次，执行用户的bashrc
+
++ getconf PAGE_SIZE
+	+ 4096
++ getconf PAGESIZE
+
+
++ curl --socks5 proxy.example.com:1000 ip.cn

@@ -58,7 +58,10 @@ commit
 		+ git branch -d | -D branchname
 			+ delete local branch
 		+ git branch -d -r branchname
-		 	+ delte remote branch
+		 	+ result: delete remote branch
+		+ git branch --set-upstream-to=origin/remote-branch-name
+			+ 将当前分支设置为跟踪来自origin的远程分支remote-branch-name
+
 	+ checkout
 		+ git checkout -b newbranch
 		+ git checkout existbranch

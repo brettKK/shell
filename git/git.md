@@ -59,6 +59,15 @@ commit
 			+ delete local branch
 		+ git branch -d -r branchname
 		 	+ result: delete remote branch
+
+		+ 远程分支重命名
+			+ 先删除远程分支
+				+ git branch --delete origin remote-branch-name
+			+ 重命名本地分支
+				+ git branch -m oldbranch newbranch
+			+ 重新提交一个远程分支
+				+ git push origin newbranch
+
 		+ git branch --set-upstream-to=origin/remote-branch-name
 			+ 将当前分支设置为跟踪来自origin的远程分支remote-branch-name
 

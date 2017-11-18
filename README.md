@@ -26,7 +26,7 @@
 
 ---
 + find
-	+ find . -name "*.xml"	
+	+ find . -name "*.xml"
 	+ find /home/q/logs/ -mtime -type f | xargs ls -lh
 + whereis
 	+ whereis ls
@@ -50,25 +50,27 @@
 + cat
 + head
 + tail
+	+ tail -f xx.log | grep hello
 + more
 + less
 
 + grep
+	+ -i 匹配时忽略大小写
 	+ -v
 	+ -E
 	+ --color
 
-+ sort 
++ sort
 	+ -k  (the colume sort)
-	+ -n 
+	+ -n
 	+ -r (reverse)
 + uniq = unique
-	+ uniq -c  (相同行爱在一起)	
+	+ uniq -c  (相同行爱在一起)
 + wc = word count
 	+ wc -c
 	+ wc -l 	
 + awk
-	+ 
+	+
 + sed
 
 + vim
@@ -91,27 +93,27 @@ http请求与传送
 ---
 网络常用工具命令
 
-+ ping 
++ ping
 + host
 + nc 网络发包工具
 	+ nc -t www.baidu.com 80
-	+ telnet 
+	+ telnet
 + netstat
-	+ netstat -an 
+	+ netstat -an
 + tcpdump
 	+ ..
 
 ---
 远程命令
 
-+ ssh 
++ ssh
 + scp
 
 ---
 进程与系统
 
 + ps
-	+ ps -ef 
+	+ ps -ef
 		+ UID PID PPID C(cpu) STIME TTY TIME(占用cpu的时间) CMD
 	+ ps -lf pid  （显示线程）
 + free 查看内存使用情况
@@ -129,18 +131,18 @@ shell script
 	+ 定义数组	array_name=(v0 v1 v2 v3)
 	+ 读取数组 value1=${array_name[1]}
 	+ 获取所有元素	@，*
-	+ 获取数组长度 echo ${#array_name[*]} 
+	+ 获取数组长度 echo ${#array_name[*]}
 + shell 传递参数
-	+ $n 
+	+ $n
 		+ n为一个数字，0为执行的文件，1位第一个参数，类推
 	+ 特殊字符
 		+ $# 传递到脚本的参数个数
 		+ $* 以字符串的显示参数 “$1..$n”
 		+ $@ 与$* 类似 加引号
-+ shell 运算符 
++ shell 运算符
 + shell 流程控制
 + shell function
-+ xargs 
++ xargs
 + crontab 定时任务
 	+ crontab	-e file
 + rsync 文件同步

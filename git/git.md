@@ -59,6 +59,9 @@ commit
 			+ delete local branch
 		+ git branch -d -r branchname
 		 	+ result: delete remote branch
+		+ git branch -vv
+			+ 查看本地分支与远程分支之间的对应关系
+
 
 		+ 远程分支重命名
 			+ 先删除远程分支

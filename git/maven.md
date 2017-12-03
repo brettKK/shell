@@ -146,8 +146,11 @@ maven 进阶
 
 + gradle
 
-
-----
+---
++ Idea导入maven工程失败
+	+ 查看／Application中Idea软件下的log文件
+	+ 在/etc/hosts下加一行 127.0.0.1 localhost
+---
 
 # maven tutorial
 

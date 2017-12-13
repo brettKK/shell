@@ -26,7 +26,7 @@
 
 ---
 + find
-	+ find . -name "*.xml"
+	+ find . -name "xx.xml"
 	+ find /home/q/logs/ -mtime -type f | xargs ls -lh
 + whereis
 	+ whereis ls
@@ -113,6 +113,13 @@ http请求与传送
 进程与系统
 
 + ps
+	+ -e 显示所有进程
+	+ -f 全格式
+	+ -l 长格式
+	+ -a 显示终端上的所有进程
+	+ -r 显示正在运行的进程
+	+ -u 以用户为主的格式显示
+	+ -x 显示所有程序，不区分终端
 	+ ps -ef
 		+ UID PID PPID C(cpu) STIME TTY TIME(占用cpu的时间) CMD
 	+ ps -lf pid  （显示线程）

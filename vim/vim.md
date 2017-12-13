@@ -14,5 +14,3 @@
 
 
 ---
-flow
-st=>start:Start  

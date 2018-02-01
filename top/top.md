@@ -11,3 +11,6 @@ linux top命令（mac top结果显示有一些区别）
   + 进程pid， 拥有者， 进程优先级PR， NI nice值， VIRT 占有的虚拟内存总量， RES 物理内存
   + SHR 共享内存， s 进程状态（D不能中断的睡眠， R运行， S睡眠，T跟踪/停止， Z僵尸）
   + %CPU，%MEM， TIME， COMMAND
+
++ top 交互按键
+  + b高亮显示运行的进程，y关闭

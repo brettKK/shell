@@ -59,6 +59,8 @@
 	+ -v
 	+ -E
 	+ --color
++ atnodes
+	+ atnode 'grep 'xx' /home/g/www/a.log' a-b[1-8].c.d
 
 + sort
 	+ -k  (the colume sort)

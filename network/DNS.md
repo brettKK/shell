@@ -1,5 +1,8 @@
 + dig
+  + 显示internet上13个根域服务器
   + dig @dnsserver name querytype
+
+
 
 ```
   用google的dns查询baidu的A记录

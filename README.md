@@ -197,10 +197,8 @@ else
 	pwd
 fi
 ```
-
-+ shell 流程控制
-+ shell function
 + xargs
+
 + crontab 定时任务
 	+ crontab	-e file
 + rsync 文件同步

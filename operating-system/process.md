@@ -5,6 +5,11 @@ task_struct结构体对应与进程相关的信息
 可执行文件的结构 （size查看）
 
 进程的内存结构
+进程的uid，euid，suid。
+euid是为了控制访问资源的
+euid一般与uid保持一致，当执行二进制程序时，若程序设置了setuid, 那么进程的euid更改为程序的宿主uid
+/usr/bin/passwd
+
 
 进程控制块PCB
 + 进程状态，运行，或者等待。。
@@ -55,6 +60,8 @@ kill -l 显示可用的信号
 
 信号的来源图
 ![image](signal_source.png)
+
+---
 
 进程退出
 + exit系统调用

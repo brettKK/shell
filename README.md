@@ -127,6 +127,9 @@ http请求与传送
 + free 查看内存使用情况
 	+ free -m (以mb为单位显示)
 	+ free -h ()
++ lsof
+	+ lsof -p pid 进程打开的文件
+	+ lsof -i:8080 打开某端口的进程
 + kill 发信号给进程
 	+ kill -9 pid 	强制杀死进程
 	+ kill -l  中断 正常退出 暂停 继续

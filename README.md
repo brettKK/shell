@@ -4,6 +4,8 @@
 + debian/ubuntu
 + redhat/fedora/centos
 
++ uname -a 查看系统的版本
+
 + 包管理
 	+ apt, yum/dnf, yast, pacman, port,...
 
@@ -16,6 +18,7 @@
 
 ---
 + ln = link
+	+ 不带参数为硬链接
 	+ 硬链接 软链接
 	+ ln -s
 	+ ln -f
@@ -102,6 +105,8 @@ http请求与传送
 	+ telnet
 + netstat
 	+ netstat -an
++ iostat
++ ip addr show
 + tcpdump
 	+ ..
 

@@ -10,6 +10,12 @@ linux文件系统基于inode的内容， inode保存meta信息
   + timestamps
   + pointer to data
 
++ 软连接，与硬连接有什么区别
+	+ ln -s source dist # 软连接 文件用户数据块中存放的内容是另一文件的路径名的指向，则该文件就是软连接
+	+ ln source dist # 硬连接 硬链接是有着相同 inode 号仅文件名不同的文件
+
+![image](soft_hard_link.png)
+
 文件系统的层次结构如下：
 文件系统中找到文件名，根据文件名找到inode号，根据inode号找到数据块
 Filesystem -> filename -> inode -> data

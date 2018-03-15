@@ -20,11 +20,11 @@ linux文件系统基于inode的内容， inode保存meta信息
 文件系统中找到文件名，根据文件名找到inode号，根据inode号找到数据块
 Filesystem -> filename -> inode -> data
 
-ext2 ext3
-inode的大小
+
+inode的大小ext2 = 128字节
+ext3
 
 df -h
-
 df -i 查看可用的inode号
 
 ls -l

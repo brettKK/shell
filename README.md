@@ -17,13 +17,6 @@
 	+ ls -lsrt ()
 
 ---
-+ ln = link
-	+ 不带参数为硬链接
-	+ 硬链接 软链接
-	+ ln -s
-	+ ln -f
-
----
 + du = disk usage
 + df = disk free
 

@@ -24,9 +24,6 @@
 + find
 	+ find . -name "xx.xml"
 	+ find /home/q/logs/ -mtime -type f | xargs ls -lh
-+ whereis
-	+ whereis ls
-+ which ls
 
 ---
 权限管理

@@ -4,7 +4,15 @@ elf格式的文件
 + 共享文件
 + 重定向文件
 
-readelf
+从linker的角度看elf文件 （sections like .text,.data, .bss,...）
+
+![image](elf.png)
+
+从exec的角度看elf文件
+sections 与 segments的区别
+
+
+readelf看elf文件的头
 
 .bss段不存在程序文件中，仅存在与内存中
 elf头记录地址，大小等记录

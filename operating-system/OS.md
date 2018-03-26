@@ -13,7 +13,7 @@ sections 与 segments的区别
 
 
 readelf看elf文件的头
-elf头记录地址，大小等记录
+elf头记录地址，大小等记录  
 
 .bss段不存在程序文件中，仅存在与内存中
 

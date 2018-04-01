@@ -9,8 +9,11 @@ elf格式的文件
 ![image](elf.png)
 
 从exec的角度看elf文件
-sections 与 segments的区别
 
+段的大小为64k，段基址代表程序在内存的起始，偏移地址代表段内偏移量
+
+sections 与 segments的区别
+section: 节，让程序员在逻辑上将程序划分为几个部分
 
 readelf看elf文件的头
 elf头记录地址，大小等记录  

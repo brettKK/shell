@@ -40,6 +40,7 @@ pid=1的进程为init进程，其他所有进程最开始均是通过init进程�
 fork+exec 创建子进程，执行新程序
 + 在shell中vim， shell进程会去fork和exec vim。
 
+---
 进程通信：
 
 信号signals：

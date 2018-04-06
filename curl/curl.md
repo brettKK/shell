@@ -13,7 +13,7 @@
 + -v 显示http通信过程 --trace
 
 + curl -u username :password URL
-+ curl 查询单词	
++ curl 查询单词
 	+ curl dict://dict.org/d:xxx 查询xxx的含义
 	+ curl dict://dict.org/show:db 列出可用的词典
 	+ curl dict://dict.org/d:xx:foldoc 利用foldoc查询xx的含义
@@ -36,9 +36,12 @@
 + 自行加request header信息
 	+ curl --header "" url
 
+-------
+常用的例子,向某个网址发送post请求，http请求的body为json格式
 
+curl -d '{"key1":"value1", "data":{"data1":"value1", "data2":"value2"}}' 'https://xxx.com/a/b'
 
----	
+---
 + practice
 	+ visit homeweb
 	+ check header in response

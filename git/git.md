@@ -24,6 +24,11 @@ commit
 	+ init
 	+ clone
 	+ remote
+		+ github上同步一个fork
+		+ git remote -v
+		+ git remote add upstream xx.git
+		+ git fetch upstream
+		+ git checkout master and git merge upstream/master
 	+ status
 
 	+ log 只记录commit操作

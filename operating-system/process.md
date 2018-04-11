@@ -8,6 +8,7 @@ euid是为了控制访问资源的
 euid一般与uid保持一致，当执行二进制程序时，若程序设置了setuid, 那么进程的euid更改为程序的宿主uid
 /usr/bin/passwd
 
+![image](process-PCB.jpg)
 
 进程控制块PCB （即数据结构task_struct）
 + 进程状态，运行，或者等待

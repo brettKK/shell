@@ -43,8 +43,9 @@ commit
 	+ push
 		+ git push -u origin brach
 	+ diff 显示工作区与暂存区的不同
+		+ 可以打patch
 		+ git diff --staged 显示缓存区与本地仓库的不同(--cached)
-
+	+ format-patch
 	+ fetch
 
 	+ merge

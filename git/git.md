@@ -29,8 +29,6 @@ commit
 		+ git remote add upstream xx.git
 		+ git fetch upstream
 		+ git checkout master and git merge upstream/master
-	+ status
-
 	+ log 只记录commit操作
 	+ reflog 所有分支的所有操作（git log历史会同步到远程仓库，reflog只存在本地）
 

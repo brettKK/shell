@@ -77,6 +77,9 @@ commit
 
 		+ git branch --set-upstream-to=origin/remote-branch-name
 			+ 将当前分支设置为跟踪来自origin的远程分支remote-branch-name
+		+ git branch --set-upstream-to=origin/remote-branch-name local-branch-name
+			+ 指定local-branch-name去跟踪origin的远程分支
+			+ 如果local-branch-name在本地未创建，fatal: branch 'local xxx branch' does not exist
 
 	+ checkout
 		+ git checkout -b newbranch
@@ -89,7 +92,6 @@ commit
 	+ rm
 	+ stash
 		+ git stash //保存当前草稿，以便切换分支
-
 
 	+ reset
 		+ 重置head到指定的状态

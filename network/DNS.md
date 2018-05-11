@@ -16,4 +16,4 @@ RSA算法
 + 收报文时，私钥解密，公钥验签
 
 非对称加密图例：
-![image](RSA.png)
+![image](net-image/RSA.png)

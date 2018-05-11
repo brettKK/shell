@@ -1,6 +1,6 @@
 
 tcp报文结构图
-![image](tcp-header.png)
+![image](net-image/tcp-header.png)
 
 + URG: 表示紧急指针（urgent pointer）是否有效
 + PSH: 提示接收端应应该立即从TCP接收缓冲区中读走数据，为接收后续数据腾出空间
@@ -10,8 +10,8 @@ tcp报文结构图
 
 tcp握手与挥手过程图（基本图，实际中可以不是这样，例如关闭时双方同时发起关闭，双方都会到达time_wait状态）
 
-![image](tcp-connect.png)
-![image](tcp-close.png)
+![image](net-image/tcp-connect.png)
+![image](net-image/tcp-close.png)
 
 ⚠️
 wireshake上的seq和ack number是relative number，0和1是为了方便查看，实际情况是其他数值

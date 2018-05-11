@@ -19,4 +19,4 @@ curl -I www.google.com
 ![image](net-image/curl-http-header.png)
 
 ---
-https
+https = http + SSL/TLS

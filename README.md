@@ -22,7 +22,17 @@
 
 ---
 + find
-	+ find . -name "xx.xml"
+	+ 以文件名查找 find . -name "xx.txt"
+	+ 以文件从属关系查找 find . -user brett
+	+ 以文件类型查找 find . -type f(普通文件，d目录文件，p管道文件)
+	+ 以文件大小查找 find . -size -1M(小于1M的文件，+1M大于1M的文件)
+	+ 以时间查找
+		+ -atime 文件访问时间，天为单位
+		+ -mtime 文件数据修改时间
+		+ -ctime 文件元数据修改时间
+	+ 指定查找深度	-maxdepth, -mindepth
+	+ find与xargs结合
+		+ 
 	+ find /home/q/logs/ -mtime -type f | xargs ls -lh
 
 ---

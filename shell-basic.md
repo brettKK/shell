@@ -62,8 +62,3 @@ else
 	pwd
 fi
 ```
-xargs，有一些命令不支持管道 | 传递参数， 所以会使用xargs， 一个命令的输出作为另一个命令的输入
-
-```
-find -name '*.c' | xargs rm
-```

@@ -32,8 +32,15 @@
 		+ -ctime 文件元数据修改时间
 	+ 指定查找深度	-maxdepth, -mindepth
 	+ find与xargs结合
-		+ 
-	+ find /home/q/logs/ -mtime -type f | xargs ls -lh
+		+ find . -name "a.txt" | grep 'key'
+		+ find . -name "a.txt" | xargs grep 'key'
+		+ find . -name "a.txt" | xargs rm
+	+ find -exec 与其他命令结合使用
+		+ find . -name "a.txt" -exec rm {} \;
+---
+管道与xargs
++ 管道：将前面的标准输出作为后面的标准输入 echo "--help" | cat
++ xargs：将前面的标准输入作为后面命令的参数 echo "--help" | xargs cat
 
 ---
 权限管理
@@ -57,11 +64,7 @@
 + more
 + less
 
-+ grep
-	+ -i 匹配时忽略大小写
-	+ -v
-	+ -E
-	+ --color
++ grep -i 匹配时忽略大小写, --color
 + atnodes
 	+ atnode 'grep 'xx' /home/g/www/a.log' a-b[1-8].c.d
 
@@ -74,13 +77,13 @@
 + wc = word count
 	+ wc -c
 	+ wc -l 	
+---
 + awk
-	+
+
 + sed
 
 + vim
 
-+ tar
 
 ---
 http请求与传送

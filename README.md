@@ -60,9 +60,14 @@
 + cat
 + head
 + tail
+	+ tail -n 10 a.txt
 	+ tail -f xx.log | grep hello
-+ more
-+ less
++ 利用head和tail查看文件中3000-5000的行
+	+ cat a.txt | head -n 5000 | tail -n 2000
+	+ cat a.txt | tail -n + 3000 | head -n 2000
++ sed也可以查看文件中特定的行
+	+ sed -n "3000,5000p" a.txt
++ more , less(更新一点)，功能上没看到区别
 
 + grep -i 匹配时忽略大小写, --color
 + atnodes

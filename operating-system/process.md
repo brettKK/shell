@@ -34,6 +34,24 @@ euid一般与uid保持一致，当执行二进制程序时，若程序设置了s
 
 pstree命令显示整个进程树
 
++ /proc/stat 系统进程整体的统计信息
+	+ intr interrupts数
+	+ ctxt 系统上下文切换次数
+	+ btime Epoch开始到现在
+	+ processes 进程数量
+	+ proc_running run的进程数
+	+ procs_blocked 等IO的进程数
++ cat /proc/pid/stat 某个进程的统计信息
++ cat /proc/pid/task 某个进程包含的所有线程
++ cat /proc/sys/kernel/pid_max 查看系统支持最多的进程数，32768 （2-32768）
+
++ fork() pthread_create() 最后在linux中都是调用do_fork， copy_process方法
+	+ linux中创建线程与进程均需要走到copy——process方法
+	+ 进程与线程，对于系统来说都是task， 与task_struct对应
+ 	+ do_fork
+		+ copy_process
+		+ 复制的内容与参数flag相关
+
 pid=1的进程为init进程，其他所有进程最开始均是通过init进程的fork来创建的
 
 

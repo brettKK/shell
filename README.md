@@ -57,6 +57,7 @@
 ---
 有显示功能的命令
 + cat
++ cut 按列分文件
 + head -n 5 a.txt
 + tail
 	+ tail -n 10 a.txt
@@ -82,9 +83,6 @@
 + awk
 
 + sed
-
-+ vim
-
 
 ---
 http请求与传送
@@ -112,11 +110,6 @@ http请求与传送
 + ip addr show
 + tcpdump
 	+ ..
-
----
-远程命令
-+ ssh
-+ scp
 
 ---
 进程与系统

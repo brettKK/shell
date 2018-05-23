@@ -1,24 +1,23 @@
 # Linux
----
-
 + debian/ubuntu
 + redhat/fedora/centos
-
 + uname -a 查看系统的版本
-
 + 包管理
 	+ apt, yum/dnf, yast, pacman, port,...
 
+各种源码协议
++ 必须开源： LGPL Mozilla  GPL（不允许将 GPL 代码用于商业产品）
++ 可以闭源： BSD MIT Apache（宽松）
 ---
 + ls = list
 	+ ls -a (display all files)
 	+ ls -l (more infomation)
 	+ ls -lh (file size k)
-	+ ls -lsrt ()
 
 ---
-+ du = disk usage
-+ df = disk free
+磁盘相关的命令
++ du 显示某个目录或者文件占用的磁盘空间
++ df 显示整个磁盘的使用情况
 
 ---
 + find
@@ -56,9 +55,9 @@
 	+ chmod = change mode
 
 ---
-
+有显示功能的命令
 + cat
-+ head
++ head -n 5 a.txt
 + tail
 	+ tail -n 10 a.txt
 	+ tail -f xx.log | grep hello
@@ -70,9 +69,6 @@
 + more , less(更新一点)，功能上没看到区别
 
 + grep -i 匹配时忽略大小写, --color
-+ atnodes
-	+ atnode 'grep 'xx' /home/g/www/a.log' a-b[1-8].c.d
-
 + sort
 	+ -k  (the colume sort)
 	+ -n
@@ -92,7 +88,6 @@
 
 ---
 http请求与传送
-
 + curl
 	+ X 指定request的method，如get，post
 	+ H 指定请求的header
@@ -120,7 +115,6 @@ http请求与传送
 
 ---
 远程命令
-
 + ssh
 + scp
 

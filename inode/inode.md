@@ -26,6 +26,11 @@ Filesystem -> filename -> inode -> data
 inode的大小ext2 = 128字节
 ext3
 
+文件=文件的数据+元数据
+
+VFS 虚拟文件系统
+4个基本对象： 超级块对象， 索引节点对象，目录项对象，文件对象
+
 df -h
 df -i 查看可用的inode号
 

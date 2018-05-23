@@ -62,3 +62,76 @@ else
 	pwd
 fi
 ```
+
+冥想五分钟可以作出正确确定
+
++ /proc/stat 系统进程整体的统计信息
+	+ intr interrupts数
+	+ ctxt 系统上下文切换次数
+	+ btime Epoch开始到现在
+	+ processes 进程数量
+	+ proc_running run的进程数
+	+ procs_blocked 等IO的进程数
++ cat /proc/pid/stat 某个进程的统计信息
++ cat /proc/pid/task 某个进程包含的所有线程
++ cat /proc/sys/kernel/pid_max 查看系统支持最多的进程数，32768 （2-32768）
+
++ fork() pthread_create() 最后在linux中都是调用do_fork， copy_process方法
+	+ linux中创建线程与进程均需要走到copy——process方法
+	+ 进程与线程，对于系统来说都是task， 与task_struct对应
+ 	+ do_fork
+		+ copy_process
+		+ 复制的内容与参数flag相关
+
+编写shell脚本
+
++ wget 下载
++ scp
++ ps 查看进程，查看指定进程的线程
++ top load，memory, cpu使用率，kill 强制杀死top的进程
++ ping www.google.com 3次
++ 得到服务器的主机名与ip，解析出qunar.com的ip
++ curl 访问www.qunar.com，并将保存cookie到本地
++ curl 访问www.qunar.com，打印出请求的连接时间和响应时间
++ 查看服务器正在使用的网络端口，一共有哪些状态，代表什么意思
+
+---
++ curl指定header的参数是什么
++ top的load average是什么, 1分钟，5分钟，15分钟内的系统平均负荷,uptime也可以显示
+---
+
+1 文件检测和目录创建
+如果某路径不存在，创建目录；else，输出其是目录还是文件
+
+2 文本行统计
+
+	+ 传递两个文本文件给脚本
+	+ 输出空行数较多的文件名以及其空行的个数
+	+ 输出总行数较多的文件以及其总行数
+
+3 将指定目录下大于10k的文件转移到／tmp下， find
+
+4 定时任务
+	+ crontab
+	+ 实现周一到周五，从早上10点到晚上7点，每个2小时提示休息
+	+ ubuntu可以使用notify-send发送通知消息
+
+
+5 分析网站日志，找出所有在一分钟请求次数超过60次的ip
+
+
+awk '{split($4, a, ":"); print $1, a[2]":"a[3]}' sample_access.log | sort | uniq -c | awk '{if($1>60) print $2}' | uniq
+
+---
+awk删除重复行
+
+---
+access.log
+
+查询日志中访问次数最多的10个IP
+cat access.log|cut -d ' ' -f 1|sort|uniq -c|sort -nr|awk '{print $0}'|head -n 10|less
+
+查询日志中出现100次以上的IP
+cat access.log|cut -d ' ' -f 1|sort|uniq -c|sort -nr|awk '{if ($1>100) print $0}'|sort -nr|less
+
+---

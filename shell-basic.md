@@ -91,14 +91,12 @@ fi
 + top load，memory, cpu使用率，kill 强制杀死top的进程
 + ping www.google.com 3次
 + 得到服务器的主机名与ip，解析出qunar.com的ip
-+ curl 访问www.qunar.com，并将保存cookie到本地
-+ curl 访问www.qunar.com，打印出请求的连接时间和响应时间
++ curl 访问www.a.com，并将保存cookie到本地
++ curl 访问www.a.com，打印出请求的连接时间和响应时间
 + 查看服务器正在使用的网络端口，一共有哪些状态，代表什么意思
 
 ---
 + curl指定header的参数是什么
-+ top的load average是什么, 1分钟，5分钟，15分钟内的系统平均负荷,uptime也可以显示
----
 
 1 文件检测和目录创建
 如果某路径不存在，创建目录；else，输出其是目录还是文件

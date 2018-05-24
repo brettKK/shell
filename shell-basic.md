@@ -101,6 +101,17 @@ awk删除重复行
 查询日志中访问次数最多的10个IP
 cat access.log|cut -d ' ' -f 1|sort|uniq -c|sort -nr|awk '{print $0}'|head -n 10|less
 
+cat access.log|awk '{print $0}'|sort|uniq -c|sort -nr|head -n 10
+
+一天中某个ip访问了哪些页面
+grep 'xx.xx.xx.xx' access.log|awk '{print $1,$7}'|sort|uniq -c
+
+一天中某个页面被访问了多少次
+grep '/xx.html' access.log|wc -l
+
+有多少ip访问了服务
+	awk '{print $1}'|sort|uniq -c|wc -l
+
 查询日志中出现100次以上的IP
 cat access.log|cut -d ' ' -f 1|sort|uniq -c|sort -nr|awk '{if ($1>100) print $0}'|sort -nr|less
 

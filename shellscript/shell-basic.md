@@ -97,8 +97,10 @@ awk '{split($4, a, ":"); print $1, a[2]":"a[3]}' sample_access.log | sort | uniq
 ---
 awk删除重复行
 
+awk '!a[$0]++' access.log
+
 ---
-查询日志中访问次数最多的10个IP
+查询日志中访问次数最多的10个IP (sort -nr从大到小排序)
 cat access.log|cut -d ' ' -f 1|sort|uniq -c|sort -nr|awk '{print $0}'|head -n 10|less
 
 cat access.log|awk '{print $0}'|sort|uniq -c|sort -nr|head -n 10
@@ -111,6 +113,12 @@ grep '/xx.html' access.log|wc -l
 
 有多少ip访问了服务
 	awk '{print $1}'|sort|uniq -c|wc -l
+
+查看每一个IP访问了多少个页面,从小到大排序
+awk '{++arr[$1]} END {for (a in arr) print a, arr[a]}' access.log | sort -n
+
+查看2018年5月14日14时这一个小时内有多少IP访问
+awk '{print $12, $1}' access.log|grep '2018.05.14'|sort|uniq -c|wc -l
 
 查询日志中出现100次以上的IP
 cat access.log|cut -d ' ' -f 1|sort|uniq -c|sort -nr|awk '{if ($1>100) print $0}'|sort -nr|less

@@ -71,34 +71,18 @@
 
 + grep -i 匹配时忽略大小写, --color
 + sort
-	+ -k  (the colume sort)
-	+ -n
-	+ -r (reverse)
+	+ -k  (按某一个列排序)
+	+ -n （按数值降序排序， 不加-n可以出现10小于2的情况）
+	+ -nr （按数字逆序排序）
 + uniq = unique
 	+ uniq -c  (相同行爱在一起)
 + wc = word count
 	+ wc -c
 	+ wc -l 	
 ---
-+ awk
-
-+ sed
-
++ awk， sed见文件夹shellscript
 ---
-http请求与传送
-+ curl
-	+ X 指定request的method，如get，post
-	+ H 指定请求的header
-	+ d 消息体
-	+ b 指定请求的cookie
-	+ c set-cookie
-	+ i reponse header
-	+ w	 format output
-+ wget 下载文件
-
----
-网络常用工具命令
-
+网络常用工具命令， 见文件夹network
 + ping
 + host
 + nc 网络发包工具
@@ -112,7 +96,7 @@ http请求与传送
 	+ ..
 
 ---
-进程与系统
+进程与系统，见文件夹operating-system
 + ps
 	+ -e 显示所有进程
 	+ -f 全格式
@@ -138,8 +122,3 @@ http请求与传送
 + crontab 定时任务
 	+ crontab	-e file
 + rsync 文件同步
-+ iostat
-+ vmstat
-
-+ atnodes 集群上运行
-+ tonodes 上传到集群

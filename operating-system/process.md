@@ -42,7 +42,7 @@ pstree命令显示整个进程树
 	+ proc_running run的进程数
 	+ procs_blocked 等IO的进程数
 + cat /proc/pid/stat 某个进程的统计信息
-+ cat /proc/pid/task 某个进程包含的所有线程
++ cat /proc/pid/task 某个进程包含的所有线程(其他方法，pstree， ps，top -H)
 + cat /proc/sys/kernel/pid_max 查看系统支持最多的进程数，32768 （2-32768）
 
 + fork() pthread_create() 最后在linux中都是调用do_fork， copy_process方法
@@ -53,8 +53,6 @@ pstree命令显示整个进程树
 		+ 复制的内容与参数flag相关
 
 pid=1的进程为init进程，其他所有进程最开始均是通过init进程的fork来创建的
-
-
 
 fork+exec 创建子进程，执行新程序
 + 在shell中vim， shell进程会去fork和exec vim。

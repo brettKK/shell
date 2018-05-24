@@ -1,4 +1,4 @@
-free查看内存使用情况，包含已用内存，可用内存，交换内存的情况，默认以字节为单位(简单版的top命令)
+free查看内存使用情况，包含已用内存，可用内存，交换内存的情况，默认以字节为单位( 简单版的top命令 )
 ![image](free.png)
 ---
 free -t (total, 有汇总行)
@@ -14,7 +14,9 @@ free命令后的buffer与cached的区别
 
 ---
 
-vmstat: 显示虚拟内存状态
+iostat: 显示磁盘读写速度状态
+vmstat: 显示整体的虚拟内存状态（调页paging，交换swapping）
+netstat：显示网络状态
 
 Procs 进程
 + r：运行的进程数

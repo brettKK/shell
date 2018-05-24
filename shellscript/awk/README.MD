@@ -1,3 +1,5 @@
+awk 脚本基本结构 awk 'BEGIN{ print "start" } pattern{ commands } END{ print "end" }' file  
+
 使用AWK做文本处理， 语句由模式和动作组成
 + 模式，决定动作的触发条件和时间
 + 动作
@@ -15,4 +17,4 @@ awk 'BEGIN {print "begin"} {print $1, $2, $3} END{print "end"}' file
 满足某个模式的行
 awk '$2>9 {print $0}' file
 
-awk '{if($1=="kk" && $2>5) print $0}' file 
+awk '{if($1=="kk" && $2>5) print $0}' file

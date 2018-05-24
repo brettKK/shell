@@ -1,3 +1,5 @@
+perf工具
+
 elf格式的文件
 + core dump file
 + 可执行文件

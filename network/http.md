@@ -37,6 +37,17 @@ curl -I www.google.com
 
 ![image](net-image/curl-http-header.png)
 
+http请求与传送
++ curl
+	+ X 指定request的method，如get，post
+	+ H 指定请求的header
+	+ d 消息体
+	+ b 指定请求的cookie
+	+ c set-cookie
+	+ i reponse header
+	+ w	 format output
++ wget 下载文件
+
 ---
 https = http + SSL/TLS
 

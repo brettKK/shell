@@ -1,30 +1,15 @@
-### git tutorial
-
-------
-git 保存的是快照；svn保存的是文件的变化
-
------------
-三种状态
-
-+ modified 》工作区
-
-add
-
-+ staged 》暂存区
-
-commit
-
-+ commited 》 本地仓库
-
-远程仓库
-
+git的项目对应于四种存储状态
++ 工作区
++ 暂存区
++ 本地仓库
++ 远程仓库
 -------
 
 + git 常用命令
 	+ init
 	+ clone
 	+ remote
-		+ github上同步一个fork
+		+ github上同步一个fork，将远程apache/xxx的更新内容合并到本地分支上
 		+ git remote -v
 		+ git remote add upstream xx.git
 		+ git fetch upstream
@@ -45,12 +30,10 @@ commit
 		+ git diff --staged 显示缓存区与本地仓库的不同(--cached)
 	+ format-patch
 	+ fetch
-
 	+ merge
 		+ git merge --abort
 		+ git merge branchname （将branchname分支合并到当前分支，主干发布，开支开发，会用到）
-	+ pull (equals fetch + merge)
-
+	+ pull (== fetch + merge)
 	+ branch
 		+ git branch newbranch
 		+ git branch -r
@@ -65,8 +48,6 @@ commit
 		 	+ result: delete remote branch
 		+ git branch -vv
 			+ 查看本地分支与远程分支之间的对应关系
-
-
 		+ 远程分支重命名
 			+ 先删除远程分支
 				+ git branch --delete origin remote-branch-name
@@ -74,7 +55,6 @@ commit
 				+ git branch -m oldbranch newbranch
 			+ 重新提交一个远程分支
 				+ git push origin newbranch
-
 		+ git branch --set-upstream-to=origin/remote-branch-name
 			+ 将当前分支设置为跟踪来自origin的远程分支remote-branch-name
 		+ git branch --set-upstream-to=origin/remote-branch-name local-branch-name
@@ -107,5 +87,6 @@ commit
 		+ git cherry-pick banbenhao
 		+ git cherry-pick --continue
 
-	+ rebase
+	+ rebase 合并commit日志
+		+ git rebase -i HEAD~2
 		+ git merge master （有叉）// git rebase master(线性)

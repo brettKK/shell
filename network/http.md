@@ -29,6 +29,12 @@ session（服务器端）和cookie（客户端）让http协议有状态
   + 保存用户的信息，存在于http数据包的头部header中
   + 是实现server端session的一种方式（如果客户端禁用了cookie， URL重写方式，url中传session id进行会话的跟踪）
 
++ 分布式session，4种实现方式
+  + session复制
+  + session仅指定一台server
+  + session集中管理，redis存放
+  + 基于cookie的方式
+
 ![image](net-image/telnet.png)
 
 

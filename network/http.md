@@ -53,8 +53,8 @@ http请求与传送
 	+ i reponse header
 	+ w	 format output
 + wget 下载文件
-
+post请求与get请求的区别
 ---
 https = http + SSL/TLS
 
-post请求与get请求的区别
+https 流程  涉及到 非对称加密 对称加密 hash算法 数字证书

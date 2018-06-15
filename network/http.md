@@ -58,3 +58,7 @@ post请求与get请求的区别
 https = http + SSL/TLS
 
 https 流程  涉及到 非对称加密 对称加密 hash算法 数字证书
+
++ https 握手阶段
++ https 传输阶段
+  + 使用对称算法进行数据加密

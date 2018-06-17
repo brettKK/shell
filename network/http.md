@@ -63,8 +63,8 @@ http请求与传送
 
 
 + http keep-alive 与 tcp keep alive 区别与联系
-  +
-  +
+  + http 用于连接复用
+  + tcp 用于保证连接存活，发送探测包确认连接是否存活
 
 post请求与get请求的区别
 ---

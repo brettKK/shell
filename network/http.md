@@ -53,6 +53,19 @@ http请求与传送
 	+ i reponse header
 	+ w	 format output
 + wget 下载文件
+
+
++ http报文头部常用字段
+  + connection: keep-alive, 持久连接（相对于用完就关闭的短连接而言）
+  + keep-alive-time: 300, 指连接维持的时间
+  + content-length: 120, 指明响应的内容有120字节
+  + transfer-encoding: chunked， 响应内容采用分块传输，最后一个分块为0表示传输结束
+
+
++ http keep-alive 与 tcp keep alive 区别与联系
+  +
+  +
+
 post请求与get请求的区别
 ---
 https = http + SSL/TLS

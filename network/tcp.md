@@ -11,6 +11,8 @@ tcp报文结构图
 + window：是TCP流量控制的一个手段， 告诉对方本端的TCP接收缓冲区还能容纳多少字节的数据，这样对方就可以控制发送数据的速度(sender在未收到ack时最大发送的字节数)
 + checkSum: 校验数据包是否损坏
 
+两个线程如何同时监听一个端口,SO_REUSEPORT 参数
+
 tcp握手与挥手过程图（基本图，实际中可以不是这样，例如关闭时双方同时发起关闭，双方都会到达time_wait状态）
 
 ![image](net-image/tcp-connect.png)

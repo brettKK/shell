@@ -56,6 +56,11 @@ http请求与传送
 
 
 + http报文头部常用字段
+  + content-type
+    + application/x-www-form-urlencoded, 原生form表单， key1=val1&key2=val2 的方式进行编码
+    + multipart/from-data, 上传文件
+    + application/json,
+    + text/xml, XML格式 （post请求的4种格式）
   + connection: keep-alive, 持久连接（相对于用完就关闭的短连接而言）
   + keep-alive-time: 300, 指连接维持的时间
   + content-length: 120, 指明响应的内容有120字节
@@ -67,6 +72,12 @@ http请求与传送
   + tcp 用于保证连接存活，发送探测包确认连接是否存活
 
 post请求与get请求的区别
+
+
++ RESTFUL api
+  + 一种API设计理论
+  + URL定位资源
+
 ---
 https = http + SSL/TLS
 

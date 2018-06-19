@@ -68,10 +68,6 @@ delete, drop, truncate区别
 		+ master会等到slave接收到relay log后，才去执行sql，性能损耗
 	+ GTID
 		+ 全局事务ID，source_id:transaction_id
-	+ mysql常见错误码
-		+ Error code 1032
-		+ Error code 1062
-		+ Error code 1593  	
 ---
 + sql优化
 + 避免select *
@@ -190,7 +186,3 @@ delete, drop, truncate区别
 		+ information_schema
 
 ---
-
-	内部类访问外部变量,为什么需要加final?
-
-	dfs

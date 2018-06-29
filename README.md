@@ -82,18 +82,20 @@
 ---
 + awk， sed见文件夹shellscript
 ---
-网络常用工具命令， 见文件夹network
-+ ping
+网络常用工具命令（文件夹network）
 + host
 + nc 网络发包工具
-	+ nc -t www.baidu.com 80
 	+ telnet
 + netstat
 	+ netstat -an
-+ iostat
-+ ip addr show
 + tcpdump
 	+ ..
+
++ 二叉树两个节点之间的距离
+
++ 读文件时系统和硬盘的过程
+
++ tcp 如何做错误处理
 
 ---
 进程与系统，见文件夹operating-system
@@ -121,4 +123,3 @@
 	+ kill -l  中断 正常退出 暂停 继续
 + crontab 定时任务
 	+ crontab	-e file
-+ rsync 文件同步

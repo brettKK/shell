@@ -79,7 +79,7 @@ post请求与get请求的区别
   + URL定位资源
 
 ---
-https = http + SSL/TLS
+https = http + SSL/TLS https的握手过程
 
 ![image](net-image/https.png)
 
@@ -89,6 +89,4 @@ https 流程  涉及到 （非对称加密 对称加密 hash算法（MD5获取�
   + 确定hash算法，对称加密算法
 + https 传输阶段
   + 使用对称算法进行数据加密(对称加密计算效率 要 高于 RSA)
-
-
 ---

@@ -1,3 +1,9 @@
+虚拟内存（map，在磁盘上）
++ 存在的原因 （内存RAM不足）
++ 页面， map(virtual addr -> physic addr)
+
+---
+
 perf工具
 
 elf格式的文件

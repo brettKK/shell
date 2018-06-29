@@ -29,6 +29,3 @@
 + getconf PAGE_SIZE
 	+ 4096
 + getconf PAGESIZE
-
-
-+ curl --socks5 proxy.example.com:1000 ip.cn

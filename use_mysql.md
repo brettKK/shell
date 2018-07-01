@@ -75,11 +75,7 @@ delete, drop, truncate区别
 	+ extra： using index, using filesort(不能通过索引达到排序), using temporary(使用了临时表)
 
 ---
-
-+ 事务的产生动机 （数据库的并发访问，失败时数据的可靠性）
 + mysql transaction
-	+ mysql 事务特性
-		+ ACID
 	+ 隔离级别 可在终端进行模拟
 		+ read uncommited （tranx will read dity data）
 			+ 读脏数据

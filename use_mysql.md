@@ -67,6 +67,7 @@ delete, drop, truncate区别
 + 不在索引字段上使用函数
 + 不使用like ‘%xx’, 多用区间操作, 能用 between 就不要用 in 	
 + 复合索引最左前缀 (不是指SQL语句的where顺序要和复合索引一致)
+	+ 复合索引底层存储也是一颗B+树，只不过排序key=（a,b,c）, 这样是复合索引使用时需要满足最左前缀的原理
 + 避免大事务（避免夹杂rpc）
 + 避免使用子查询， 子查询产生的临时表再扫描无索引可走，会全表扫描
 + explain 显示select语句的执行计划
@@ -95,7 +96,7 @@ delete, drop, truncate区别
 + innodb重要的日志，undo logs, redo logs
 	+ undo logs: 记录某数据被修改前的值，可以用来在事务失败时进行rollback
 	+ redo logs: 保证事务的持久性
-+ undo+relog
++ undo+redo log
 	+ 为保证事务的持久性，事务提交前先写redo log持久化（WAL）
 	+ 数据不需要在事务提交前写入磁盘，而是在内存的缓存中
 	+ redo log保证事务的持久性， undo log保证事务的原子性

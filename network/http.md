@@ -57,7 +57,7 @@ http请求与传送
 
 + http报文头部常用字段
   + content-type
-    + application/x-www-form-urlencoded, 原生form表单， key1=val1&key2=val2 的方式进行编码
+    + application/x-www-form-urlencoded, (默认类型)原生form表单， key1=val1&key2=val2 的方式进行编码
     + multipart/from-data, 上传文件
     + application/json,
     + text/xml, XML格式 （post请求的4种格式）

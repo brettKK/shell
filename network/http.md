@@ -63,7 +63,7 @@ http请求与传送
     + text/xml, XML格式 （post请求的4种格式）
   + connection: keep-alive, 持久连接（相对于用完就关闭的短连接而言）
   + keep-alive-time: 300, 指连接维持的时间
-  + content-length: 120, 指明响应的内容有120字节
+  + content-length: 120, 指明响应的内容有120字节 (出现等于-1，但是body有数据的情况？)
   + transfer-encoding: chunked， 响应内容采用分块传输，最后一个分块为0表示传输结束
 
 

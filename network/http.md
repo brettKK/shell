@@ -72,6 +72,7 @@ http请求与传送
   + tcp 用于保证连接存活，发送探测包确认连接是否存活
 
 post请求与get请求的区别
++ ping url结果为unkown host，但是curl url可以通
 
 
 + RESTFUL api

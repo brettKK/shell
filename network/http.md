@@ -84,10 +84,13 @@ https = http + SSL/TLS https的握手过程
 
 ![image](net-image/https.png)
 
-https 流程  涉及到 （非对称加密 对称加密 hash算法（MD5获取摘要） 数字证书 数字签名）
+https 流程  涉及到（非对称加密 对称加密 hash算法（MD5获取摘要） 数字证书 数字签名）
 
 + https 握手阶段 （确定加密算法， 获取服务器的证书 证明 服务器是client想要的）
   + 确定hash算法，对称加密算法
 + https 传输阶段
   + 使用对称算法进行数据加密(对称加密计算效率 要 高于 RSA)
++ https的body里加签sign
+  + 加签方式（md5 with salt）在内容里添加“sign”=md5(content+salt)
+  + 验签方式（md5 with rsa）对内容进行md5，rsa公钥解密， 对比传过来的sign与解密出来的sign是否一致
 ---

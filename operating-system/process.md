@@ -67,11 +67,11 @@ fork+exec 创建子进程，执行新程序
 + SIGABRT： 丢弃执行进程
 + SIGHUP： 挂起
 + SIGINT: 进程中断， ctrl+C可以产生
-+ SIGKILL: 杀死进程， kill -9 pid， 不能忽略
++ SIGKILL: 杀死进程， kill -9 pid， 不能忽略 uncatchable
 + SIGTERM: 进程终止， kill pid
 + SIGPIPE: 非法写管道
 + SIGQUIT： 进程退出，ctrl+\
-+ SIGSTOP: 终止进程， 不能忽略
++ SIGSTOP: 终止进程， 不能忽略 uncatchable
 + SIGTSTP: 终止进程， ctrl+z
 + SIGCHLD: 当子进程退出时，发送给父进程的信号
 + SIGSEGV: 段错误

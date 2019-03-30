@@ -74,6 +74,7 @@
 	+ -k  (按某一个列排序)
 	+ -n （按数值降序排序， 不加-n可以出现10小于2的情况）
 	+ -nr （按数字逆序排序）
+	+ 文件A， B 差集（A - B） sort a.csv b.csv|uniq -u > c.csv
 + uniq = unique
 	+ uniq -c  (相同行爱在一起)
 + wc = word count

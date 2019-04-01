@@ -76,7 +76,7 @@
 	+ -nr （按数字逆序排序）
 	+ 文件A， B 差集（A - B） sort a.csv b.csv|uniq -u > c.csv
 + uniq = unique
-	+ uniq -c  (相同行爱在一起)
+	+ uniq -c  (相同行爱在一起 所以前面是sort命令)
 + wc = word count
 	+ wc -c
 	+ wc -l 	

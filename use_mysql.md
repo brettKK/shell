@@ -2,6 +2,24 @@
 + MariaDB
 + PERCONA
 
+---
+
+mysql技术内幕 InnoDB存储引擎 姜承尧
+
+数据库由一些数据文件；数据库实例是操作数据的一个进程。APP -> db instance -> db files
+
++	Mysql
+	+ 连接池组件 （connection pool）
+	+ 管理服务 工具组件 (backup, recovery, replication...)
+	+ sql接口组件
+	+ 查询分析组件
+	+ 优化器
+	+ 缓冲cache组件 
+	+ 插件式存储引擎
+	+ 物理文件
+---
+
+
 存储引擎-是创建表时设置的，所以存储引擎是表级别的使用
 + innodb: 只有数据文件即时索引文件，一个表对应一个文件              
 + mysiam: 既有数据文件，又有索引文件

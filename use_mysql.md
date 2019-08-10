@@ -102,7 +102,7 @@ delete, drop, truncate区别
 	+ extra： using index, using filesort(不能通过索引达到排序), using temporary(使用了临时表)
 
 ---
-+ mysql transaction
++ mysql transaction （ACID 锁保证隔离性， relog 保证原子性和持久性， undo保证一致性）
 	+ 隔离级别 可在终端进行模拟
 		+ read uncommited （tranx will read dity data）
 			+ 读脏数据
@@ -115,10 +115,14 @@ delete, drop, truncate区别
 		+ seriablizable
 	+ mvcc
 		+ 增加2列，一列保存行的创建时间，一列保存行的删除时间
-		+ 实现了读写不冲突，可重复读，提高了性能  
+		+ undo log 实现了读写不冲突，可重复读，提高了性能  
 + innodb重要的日志，undo logs, redo logs
-	+ undo logs: 记录某数据被修改前的值，可以用来在事务失败时进行rollback
-	+ redo logs: 保证事务的持久性
+	+ undo logs: 记录某数据被修改前的值，可以用来在事务失败时进行rollback，保证一致性
+		+ 逻辑日志，随机写，每行记录修改， 采用段的方式
+		+ 帮助事务回滚以及MVCC功能 
+	+ redo logs: 保证事务的原子性和持久性
+		+ 物理日志，顺序写，512字节，记录的是页的物理修改操作
+		+ 确保redo log写入磁盘，事务提交前需要fsync操作。 因此磁盘的性能决定了事务提交的性能。
 + undo+redo log
 	+ 为保证事务的持久性，事务提交前先写redo log持久化（WAL）
 	+ 数据不需要在事务提交前写入磁盘，而是在内存的缓存中
@@ -129,7 +133,8 @@ delete, drop, truncate区别
 		+ 行级锁
 			+ Record Lockx 对索引项加锁，锁定一条记录
 			+ Gap Lockx 锁定一个范围，不包含记录本身
-			+ Next-Key Lock = gap + record lock
+			+ Next-Key Lock = gap + record lock, 锁定一个范围 并锁定记录本身
+				+ 查询的索引包含唯一属性时，next-key lock 降级为record lock
 		+ 表级锁 （不会出现死锁）MyISAM 读写，写写都是串行的 另 页面锁
 ---
 

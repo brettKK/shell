@@ -108,6 +108,7 @@ delete, drop, truncate区别
 			+ 读脏数据
 		+ read committed (no repeatable read)
 			+ 不可重复读（事务中两次读的结果不一致）
+			+ 事务1等读到事务2的commit， 从数据库对事务ACID角度上讲，违背了隔离性
 		+ repeatable read (default mode)
 			+ 事务在运行时看到相同的数据，可重复读
 			+ 存在幻读（innodb的间隙锁解决）

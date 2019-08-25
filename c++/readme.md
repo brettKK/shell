@@ -6,6 +6,6 @@
 		+ 插件 Microsoft C/C++ extension for VS code
     + 项目结构 CMakeLists.txt -- cmake --> makefile --> make --> bin/...
         + cmake VS premake
-            +  
+            +  CMakeLists.txt (参数之间使用空格进行间隔)
         + makefile
     

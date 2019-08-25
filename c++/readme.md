@@ -7,5 +7,7 @@
     + 项目结构 CMakeLists.txt -- cmake --> makefile --> make --> bin/...
         + cmake VS premake
             +  CMakeLists.txt (参数之间使用空格进行间隔)
+            + aux_source_directory(. DIR_SRCS)
+            + add_subdirectory(math)
         + makefile
     

@@ -4,7 +4,8 @@
         + Xcode
         + vs code
 		+ 插件 Microsoft C/C++ extension for VS code
-    + 项目结构
-        + cmake
+    + 项目结构 CMakeLists.txt -- cmake --> makefile --> make --> 
+        + cmake VS premake
+            + 
         + makefile
     

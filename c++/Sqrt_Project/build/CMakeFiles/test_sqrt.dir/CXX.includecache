@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/gonglei/brettKK/shell/c++/Sqrt_Project/include/a.h
+math.h
+-
+
+/Users/gonglei/brettKK/shell/c++/Sqrt_Project/src/a.cxx
+../include/a.h
+/Users/gonglei/brettKK/shell/c++/Sqrt_Project/include/a.h
+
+/Users/gonglei/brettKK/shell/c++/Sqrt_Project/src/main.cxx
+../include/a.h
+/Users/gonglei/brettKK/shell/c++/Sqrt_Project/include/a.h
+stdio.h
+-
+

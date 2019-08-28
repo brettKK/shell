@@ -2,8 +2,6 @@
 + debian/ubuntu
 + redhat/fedora/centos
 + uname -a 查看系统的版本
-+ 包管理
-	+ apt, yum/dnf, yast, pacman, port,...
 
 各种源码协议
 + 必须开源： LGPL Mozilla  GPL（不允许将 GPL 代码用于商业产品）

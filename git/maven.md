@@ -65,8 +65,6 @@
 		+ Maven 生成站点和部署。http://blog.csdn.net/cruise_h/article/details/17188399
 
 
-+ use idea to create a maven project
-
 + pom file
 	+ groupID
 	+ atifactId
@@ -188,16 +186,3 @@ maven 进阶
 + maven build
 	+ build lifeCycle
 	+
-+ plugins with the maven compiler plugin
-	+ mvn jetty:run
-	+ <build>
-		+ <plugins>
-			+ <plugin>
-				+ gourpId
-				+ artifactId
-				+ version
-				+ configuration like <scanIntervalSeconds>5</scanIntervalSeconds>
-					+ speed up your development process
-			+ </plugin>
-		+ </plugins>
-	+ </build>

@@ -28,3 +28,14 @@
     + make  (waiting 1 hour)
     + export PATH="llvm/build/bin":$PATH
     + 命令行 可以使用 llc等 命令程序
+
+
+---
+problem
+
+fatal error: 'iostream' file not found
+#include<iostream>
+        ^~~~~~~~~~
+1 error generated.
+
+解决办法： clang++ -I"/Library/Developer/CommandLineTools/usr/include/c++/v1"

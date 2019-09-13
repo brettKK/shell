@@ -1,5 +1,5 @@
 # Linux
-+ debian/ubuntu
+ debian/ubuntu
 + redhat/fedora/centos
 + uname -a 查看系统的版本
 

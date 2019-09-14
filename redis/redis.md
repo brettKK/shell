@@ -27,8 +27,8 @@
         + 定期删除策略 (redis.c/activeExpireCycle)
         + save 生成rdb文件， 不会保存过期键
     + 数据库通知
-        + 
 + RDB持久化
+    + 
 + AOF持久化
 + 事件
 + 客户端

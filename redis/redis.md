@@ -36,14 +36,30 @@
         + 定义为 id， when， timeProc(函数的返回类别 区分 是周期还是定时)
         + 一般情况下 只会有serverCron 一个周期时间事件
 + 客户端
-    + 
-    + 
 + 服务端
-    + 
-    + 
+    + 初始化服务器状态， 载入服务器配置，初始化服务器数据结构，还原数据库配置，执行事件循环
+    + serverCron  默认100ms执行一次。
 
 
 #### 多机数据库的实现
 + 复制
-+ sentinel
++ sentinel 哨兵系统
+    + 集群状态监控
+    + raft协议 选新主
 + 集群
+    + cluster meet ip port 把ip+port加入到cluster中
+    + 16384个槽的分配 moved错误 （请求a到机器上，但机器存放该key对应的槽，所以返回集群中正确的机器地址）  ask错误（刚好负责这个槽，所以暂时无数据的临时措施）
+    + 消息（集群内通过发送和接受消息来通讯 5种类型的消息） cluster.h/clusterMsg, clusterMsgData
+        + meet消息 加入cluster的信号
+        + ping消息 pong消息
+        + fail消息 
+        + publish消息 
+
+#### 独立功能的实现
++ 发布与订阅
++ 事务
++ lua脚本
++ 排序
++ 二进制位数组
++ 慢查询日志
++ 监视器

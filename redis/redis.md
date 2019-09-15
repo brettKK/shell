@@ -31,8 +31,16 @@
     + 
 + AOF持久化
 + 事件
+    + 文件事件 ae_select.c , ae_epoll.c, ae_kqueue.c reactor模式
+    + 时间事件 (定时事件， 周期性事件)
+        + 定义为 id， when， timeProc(函数的返回类别 区分 是周期还是定时)
+        + 一般情况下 只会有serverCron 一个周期时间事件
 + 客户端
+    + 
+    + 
 + 服务端
+    + 
+    + 
 
 
 #### 多机数据库的实现

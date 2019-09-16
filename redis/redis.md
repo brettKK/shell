@@ -64,4 +64,7 @@
 + 排序
 + 二进制位数组
 + 慢查询日志 slowlog get
-+ 监视器 monitor 命令
++ 监视器 monitor 命令 客户端变为监视器
+
+--- 
+redis in action

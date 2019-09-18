@@ -67,5 +67,3 @@
 + 监视器 monitor 命令 客户端变为监视器
 
 --- 
-redis in action
-..

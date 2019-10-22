@@ -45,6 +45,15 @@ pstree命令显示整个进程树
 + cat /proc/pid/stat 某个进程的统计信息
 + cat /proc/pid/task 某个进程包含的所有线程(其他方法，pstree， ps，top -H)
 + cat /proc/sys/kernel/pid_max 查看系统支持最多的进程数，32768 （2-32768）
++ cat /proc/pid/maps 进程的内存模型
+	+ 记录进程能够访问的地址集合virt，即虚拟地址空间virtual memory areas 
+	+ 代码段 起始地址 结束地址 权限。 read exe
+	+ rodata read only
+	+ 数据段 .bss , .data read write
+	+ 堆 
+	+ 栈
+	+ 文件映射 page cache 磁盘io
+	+ 匿名映射  一段VMA后没文件和heap，就是匿名映射，主要是一次申请较多内存时 用户存放未用的地址空间
 
 + fork() pthread_create() 最后在linux中都是调用do_fork， copy_process方法
 	+ linux中创建线程与进程均需要走到copy——process方法

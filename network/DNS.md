@@ -1,3 +1,24 @@
++ 网络接入层
+  + user -> machine room
+    + 大运营商（电信，联通） 小运营商（鹏博士 铁通），移动运营商
+    + 机房选择
+      + 费用（机柜，带宽）
+      + 服务质量
+      + BGP机房（单ip多线）多ip多线
+    + 阿里云CDN加速
+  + machine room -> 服务节点
+    + 四层负载均衡 lvs vip ecmp
+    + 七层负载均衡 nginx + lua, openresty 
+  + 服务节点 -> web服务器进程
+    + tcp协议栈 -》 gin， CGI FastCGI（进程池化）
+    + ngrep traceroute
+  
+  + 协议演进
+    + tcp协议， BBR， HPCC
+    + http协议， http2.0， QUIC
+    + 用户态TCP协议栈, DPDK
+  
+
 + dig
   + 显示internet上13个根域服务器
   + dig @dnsserver name querytype

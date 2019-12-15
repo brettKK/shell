@@ -11,6 +11,9 @@
 + -i 显示response header and html
 + -I only response header
 + -v 显示http通信过程 --trace
+  + curl -v http://www.example.com/index.html
+  + > 发送的请求， <接收的响应
+  + RFC2616
 
 + curl -u username :password URL
 + curl 查询单词

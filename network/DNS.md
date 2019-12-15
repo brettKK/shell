@@ -11,7 +11,7 @@
     + 七层负载均衡 nginx + lua, openresty 
   + 服务节点 -> web服务器进程
     + tcp协议栈 -》 gin， CGI FastCGI（进程池化）
-    + ngrep traceroute
+    + ngrep traceroute, nslookup baidu.com, dig baidu.com
   
   + 协议演进
     + tcp协议， BBR， HPCC
@@ -29,6 +29,7 @@
   用google的dns查询baidu的A记录
   dig @8.8.8.8 www.baidu.com A
 ```
+
 
 nslookup用得少，dig用得多
 

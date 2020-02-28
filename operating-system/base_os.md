@@ -117,6 +117,9 @@
 + lsof
 	+ lsof -p pid 进程打开的文件
 	+ lsof -i:8080 打开某端口的进程
++ 查某个进程打开的端口号
+	+ lsof -p pid|grep LISTEN
+	+ netstat -nltp |grep pid
 + kill 发信号给进程
 	+ kill -9 pid 	强制杀死进程
 	+ kill -l  中断 正常退出 暂停 继续

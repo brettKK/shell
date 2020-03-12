@@ -4,14 +4,16 @@ linux performance analysis -- perf
 makes use of data from Performance Monitoring Unit(PMU) on CPUS
 
 common command
+
+  list perf list 显示可以触发perf采样点的事件
+
  stat perf stat 运行的程序的整体情况
 
- record perf record 记录函数级别的统计信息
-
- list perf list 显示可以触发perf采样点的事件
+ record   perf record 记录函数级别的统计信息
 
  report
 
+script 
  trace
 
  common options

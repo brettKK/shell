@@ -1,5 +1,8 @@
 + The Linux Programming Interface - A Linux and UNIX System Programming Handbook.pdf
 
+
+
+
 虚拟内存（map，在磁盘上）
 + 存在的原因 （内存RAM不足）
 + 页面， map(virtual addr -> physic addr)
@@ -44,7 +47,7 @@ bss中的实际内容在程序运行时才产生，起初并无意义
 
 ---
 
-中断向量表
+中断向量表 
 
 
 段基址 段内偏移量

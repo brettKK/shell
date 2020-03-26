@@ -3,10 +3,15 @@ task_struct结构体对应与进程相关的信息
 可执行文件的结构 （size查看）
 
 进程的内存结构
-进程的uid，euid，suid。
+
++ 进程的凭证，证书 进程的uid，euid，suid。
++ 进程的real uid，gid 在/etc/password 第三列第四列里
++ 
 euid是为了控制访问资源的
 euid一般与uid保持一致，当执行二进制程序时，若程序设置了setuid, 那么进程的euid更改为程序的宿主uid
 /usr/bin/passwd
+
+
 
 ![image](process-PCB.jpg)
 

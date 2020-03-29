@@ -40,17 +40,19 @@ euid一般与uid保持一致，当执行二进制程序时，若程序设置了s
 
 pstree命令显示整个进程树
 
-+ /proc/stat 系统进程整体的统计信息
++ cat /proc/stat 系统进程整体的统计信息
 	+ intr interrupts数
 	+ ctxt 系统上下文切换次数
 	+ btime Epoch开始到现在
 	+ processes 进程数量
 	+ proc_running run的进程数
 	+ procs_blocked 等IO的进程数
-+ cat /proc/pid/stat 某个进程的统计信息
-+ cat /proc/pid/task 某个进程包含的所有线程(其他方法，pstree， ps，top -H)
++ /proc/pid
+	+ cat /proc/pid/stat 某个进程的统计信息
+	+ cat /proc/pid/task 某个进程包含的所有线程(其他方法，pstree， ps，top -H)
+	+ cat /proc/pid/maps 进程的内存模型
+
 + cat /proc/sys/kernel/pid_max 查看系统支持最多的进程数，32768 （2-32768）
-+ cat /proc/pid/maps 进程的内存模型
 	+ 记录进程能够访问的地址集合virt，即虚拟地址空间virtual memory areas 
 	+ 代码段 起始地址 结束地址 权限。 read exe
 	+ rodata read only

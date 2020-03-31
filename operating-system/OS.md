@@ -42,7 +42,25 @@ bss中的实际内容在程序运行时才产生，起初并无意义
 
 ---
 
-硬盘的读写单位是扇区，文件的读写单位为数据块
+硬盘的读写单位是扇区，文件的读写单位为数据块512byte
+
+文件stat结构 
+    设备id 
+    inode id
+    
+    mode (file type + permission)
+    nlink 
+
+    uid
+    gid
+    
+    size （文件大小 bytes）
+    blk size 
+    blocks (分配的blocks（512B）数量)
+    
+    access time
+    modification time
+    status change time
 
 ---
 

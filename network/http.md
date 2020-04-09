@@ -104,6 +104,14 @@ https 流程  涉及到（非对称加密 对称加密 hash算法（MD5获取摘
     + DES， AES， 
 + SSL/TLS
 
+---
+
++ 信封加密:  本地化加解密， 只需要传送DEK的明文到kms，返回DEK的秘文到client，高效且避免大量数据的网络传输。
+
+![image](net-image/xinfeng_encryp.png)
+
+----
+
 + 加密系统设计注意点
     + 加解密运算 与 存储分离
     + 访问鉴权

@@ -56,3 +56,7 @@ curl -d '{"key1":"value1", "data":{"data1":"value1", "data2":"value2"}}' 'https:
 	+ 存储server返回的cookie到本地文件
 	+ 使用存储在本地的cookie提交
 	+ 设置请求header
+
++ ping icmp协议 封装在IP包里
+	+ 类型0 8 请求与响应
+	+ 3是不可达 后面有代码号 5种情况 ( ip中的网络号-网络不可达 ip中的主机号-主机不可达 防火墙不允许tcp连接-协议不可达 端口没有进程监听-端口不可达 mtu大小的问题 )

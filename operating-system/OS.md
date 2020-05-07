@@ -3,8 +3,11 @@
 + mmu (tlb)
 
 虚拟内存（map，在磁盘上）
-+ 存在的原因 （内存RAM不足）
-+ 页面， map(virtual addr -> physic addr)
++ 给进程提供统一的地址空间
++ 页面， map(virtual addr --tlb--> physic addr)
+
+
+内存模型 cache 一致性
 
 ---
 

@@ -42,7 +42,8 @@
 -------
 常用的例子,向某个网址发送post请求，http请求的body为json格式
 
-curl -d '{"key1":"value1", "data":{"data1":"value1", "data2":"value2"}}' 'https://xxx.com/a/b'
++ curl -d '{"key1":"value1", "data":{"data1":"value1", "data2":"value2"}}' 'https://xxx.com/a/b'
++ curl -F 'business_type=one' -F 'data=@/Users/kk/a.csv'  x.x.x.x:xx/a/b curl发送文件
 
 ---
 + practice

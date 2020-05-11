@@ -45,3 +45,16 @@
   + g/old_word/s//new_word/g
 active and inactive list LRU
 grep -i active /proc/meminfo
+
+---
+
++ linux shell脚本攻略
++ The AWK Programming Language
++ sed and awk 101 hacks
+Bash One-Liners Explained
+sed One-Liners Explained
+sed One-Liners Explained
+perl One-Liners Explained
+http://www.theunixschool.com/
+
+---

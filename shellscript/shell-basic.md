@@ -1,7 +1,14 @@
-shell script
-
 执行shell脚本的3个方法
 1 ./a.sh 2 绝对路径/test/a.sh 3 bash a.sh
+
++ linux shell脚本攻略
++ The AWK Programming Language
++ sed and awk 101 hacks
+Bash One-Liners Explained
+sed One-Liners Explained
+sed One-Liners Explained
+perl One-Liners Explained
+http://www.theunixschool.com/
 
 set列出所有的变量
 unset 变量，删除变量

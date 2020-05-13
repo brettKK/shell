@@ -125,3 +125,7 @@
 	+ kill -l  中断 正常退出 暂停 继续
 + crontab 定时任务
 	+ crontab	-e file
+
+
++ 无锁环形缓冲区
++ 高级链表

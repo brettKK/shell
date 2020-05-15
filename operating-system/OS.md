@@ -6,6 +6,14 @@
 + 给进程提供统一的地址空间
 + 页面， map(virtual addr --tlb--> physic addr)
 
+linux可执行文件 ==》 虚拟地址空间(分段 segment)
+
+proc目录下 查看进程的虚拟地址空间布局  cat /proc/pid/maps vm_area_struct
+
+readelf -s a.out
+readelf -l a.out 查看elf的段
+
+
 
 内存模型 cache 一致性
 

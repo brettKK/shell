@@ -128,7 +128,7 @@
 
 
 + 无锁环形缓冲区
-	+ dpdk ring buffer
-	+ NIC ring buffer , ethtool
+	+ dpdk ring buffer (CAS , memory barrier, cache line 对齐)
+	+ NIC ring buffer , ethtool, struct sk_buff
 	+ disruptor ring buffer
 + 高级链表

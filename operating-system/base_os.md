@@ -128,7 +128,12 @@
 
 
 + 无锁环形缓冲区
-	+ dpdk ring buffer (CAS , memory barrier, cache line 对齐)
+	+ dpdk ring buffer 
+		+ array (内存连续存储，对cpu cache line友好)
+		+ size power of 2 for convinient calculate
+		+ padding struct obj for cache line 对齐
+		+ CAS (ABA 问题 额外增加stamp，类似version判断是否出现ABA)
+		+ memory barrier
 	+ NIC ring buffer , ethtool, struct sk_buff
 	+ disruptor ring buffer
 + 高级链表

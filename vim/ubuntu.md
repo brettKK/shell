@@ -23,8 +23,7 @@
 	+ ctrl + alt + f7
 + 打开终端
 	+ ctrl + alt + t
-+ terminal
-	+ 分屏	同时看多台服务器上的日志
++ terminal  分屏	同时看多台服务器上的日志
 
 -----
 + /etc/profile

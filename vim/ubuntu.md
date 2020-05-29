@@ -1,3 +1,17 @@
++ vim 基本模式
+	+ normal模式 每个字符被当作命令
+		+ other mode -- esc --> normal模式
+		+ + command-line模式
+		+ normal模式 -- /，？，：--》 command-line mode --enter--> normal mode
+		+ normal模式 --：command-line mode --set nu --> normal mode
+		+ visual模式
+			+ normal mode -- V--> visual line
+	+ insert模式 每个字符被当作文本内容
+		+ normal mode -- a, A, i, I, o, O --> insert mode
+	
+
++ vim 配置
+	+ 
 + 进入终端全屏
 	+ ctrl + alt + f1
 	+ ctrl + alt + f2

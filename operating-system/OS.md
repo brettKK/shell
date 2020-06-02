@@ -16,7 +16,6 @@ readelf -l a.out 查看elf的段
 
 + numa 架构（cpu 内存 非均匀访问） 多 CPU 系统下共享 BUS 带来的性能问题
 
-
 内存模型 cache 一致性
 
 ---

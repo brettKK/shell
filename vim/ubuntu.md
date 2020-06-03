@@ -1,3 +1,5 @@
+#learn vim
+
 + vim 基本模式
 	+ normal模式 每个字符被当作命令
 		+ other mode -- esc --> normal模式
@@ -46,7 +48,7 @@
 	+ 4096
 + getconf PAGESIZE
 
-#learn vim
+
 
 + ~/.vimrc
 + .bashrc
@@ -60,10 +62,6 @@
 + 在整个文件中替换特定字符串
   + :%s/old_word/new_word/g // %s/old_word/new_word/gc  每次替换会确认一下
   + g/old_word/s//new_word/g
+
 active and inactive list LRU
 grep -i active /proc/meminfo
-
----
-
-
----

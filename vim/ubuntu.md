@@ -8,8 +8,11 @@
 			+ normal mode -- V--> visual line
 	+ insert模式 每个字符被当作文本内容
 		+ normal mode -- a, A, i, I, o, O --> insert mode
-	
-
++ vim -o file1 file2
++ :sp    :vsp
++ hjkl 代替光标 10h 12k
+	+ ctl + b  ctl + f 向上 向下 翻页
++ u 撤销 ctrl+v 重复
 + vim 配置
 	+ 
 + 进入终端全屏

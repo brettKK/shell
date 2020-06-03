@@ -1,3 +1,20 @@
++ vim 基本模式
+	+ normal模式 每个字符被当作命令
+		+ other mode -- esc --> normal模式
+		+ + command-line模式
+		+ normal模式 -- /，？，：--》 command-line mode --enter--> normal mode
+		+ normal模式 --：command-line mode --set nu --> normal mode
+		+ visual模式
+			+ normal mode -- V--> visual line
+	+ insert模式 每个字符被当作文本内容
+		+ normal mode -- a, A, i, I, o, O --> insert mode
++ vim -o file1 file2
++ :sp    :vsp
++ hjkl 代替光标 10h 12k
+	+ ctl + b  ctl + f 向上 向下 翻页
++ u 撤销 ctrl+v 重复
++ vim 配置
+	+ 
 + 进入终端全屏
 	+ ctrl + alt + f1
 	+ ctrl + alt + f2
@@ -9,8 +26,7 @@
 	+ ctrl + alt + f7
 + 打开终端
 	+ ctrl + alt + t
-+ terminal
-	+ 分屏	同时看多台服务器上的日志
++ terminal  分屏	同时看多台服务器上的日志
 
 -----
 + /etc/profile
@@ -49,13 +65,5 @@ grep -i active /proc/meminfo
 
 ---
 
-+ linux shell脚本攻略
-+ The AWK Programming Language
-+ sed and awk 101 hacks
-Bash One-Liners Explained
-sed One-Liners Explained
-sed One-Liners Explained
-perl One-Liners Explained
-http://www.theunixschool.com/
 
 ---

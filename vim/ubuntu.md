@@ -39,9 +39,10 @@
 
 
 + 查找某个字符串
-  + 命令模式:／strings
+  + 命令模式:／strings ，光标位置向下查找
+  + :?strings, 光标位置向上查找
 + 在整个文件中替换特定字符串
-  + :%s/old_word/new_word/g
+  + :%s/old_word/new_word/g // %s/old_word/new_word/gc  每次替换会确认一下
   + g/old_word/s//new_word/g
 active and inactive list LRU
 grep -i active /proc/meminfo

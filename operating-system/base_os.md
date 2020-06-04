@@ -127,6 +127,9 @@
 	+ crontab	-e file
 
 
++ kernel bypass 绕过内核
+	+ 解决内核网络栈和存储栈性能问题的一种思路：内核用来处理控制流，用户态处理数据流
+	+ 避免内核：包拷贝，系统调用，线程调度等性能损耗，（poll, cpu pin, lock-free queue）(DPDK, NETMAP, SPDK, PF_RING, RDMA)
 + 无锁环形缓冲区
 	+ dpdk ring buffer 
 		+ array (内存连续存储，对cpu cache line友好)

@@ -28,6 +28,15 @@
 
 
 ```
++ fatal: unable to access 'https://github.com/brettKK/shell.git/': Failed to connect to github.com port 443: Operation timed out
+  + vim /etc/hosts ==> find github.com to delete
+
+$ ping github.com
+PING github.com (52.74.223.119): 56 data bytes
+Request timeout for icmp_seq 0
+Request timeout for icmp_seq 1
+Request timeout for icmp_seq 2
+
   用google的dns查询baidu的A记录
   dig @8.8.8.8 www.baidu.com A
 ```

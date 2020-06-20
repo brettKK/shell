@@ -19,6 +19,17 @@
     + 值对象， 为字符串对象，列表对象，哈希对象，集合对象，有序集合对象
     + redisObject结构体： type, encoding, prt, refcount, lru...
 
+```
+typedef strcut redisObject {
+    unsigned type:4; // 对象类型
+    unsigned encoding:4; // 实现方式 
+    unsigned lru:REDIS_LRU_BITS; // 对象的空转时长
+    int refcount;
+    void *ptr;  //encoding方式实现的承载者的地址
+}
+
+```
+
 #### 单机数据库的实现
 + 数据库
     + redis.h/redisServer, redisDb

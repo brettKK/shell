@@ -19,6 +19,17 @@
     + 值对象， 为字符串对象，列表对象，哈希对象，集合对象，有序集合对象
     + redisObject结构体： type, encoding, prt, refcount, lru...
 
+```
+typedef strcut redisObject {
+    unsigned type:4; // 对象类型
+    unsigned encoding:4; // 实现方式 
+    unsigned lru:REDIS_LRU_BITS; // 对象的空转时长
+    int refcount;
+    void *ptr;  //encoding方式实现的承载者的地址
+}
+
+```
+
 #### 单机数据库的实现
 + 数据库
     + redis.h/redisServer, redisDb
@@ -39,7 +50,24 @@
 + 服务端
     + 初始化服务器状态， 载入服务器配置，初始化服务器数据结构，还原数据库配置，执行事件循环
     + serverCron  默认100ms执行一次。
-
++ 客户端与服务端的交互
+    + 交互模式： 
+        + 串行的请求/响应 
+        + 双工的请求/响应pipeline 
+        + 原子化的批量请求/响应（事务） 
+            + multi 开启事务，客户端将命令发送到服务端入队列（出错不会执行exec）， exec一次性执行 （执行失败后继续执行）结果返回数组。感觉只是保证了multi阶段的事务，执行阶段不是事务
+            + 
+        + 发布/订阅模式，脚本模式
+    + 交互协议分2部分： 网络协议（tcp连接）和序列化协议
+        + 序列化协议 内容均以‘\r\n’结尾
+            + inline command: 首字符以Redis开头的字符 例EXIST空格key1\r\n
+            + simple string:  首字符以+开头， 例+OK\r\n
+            + bulk string: 字符串本身包含了\r and \n,  解法有两种：加转义字符 or 长度自描述（redis是后者）. 例$12\r\nhello\rxxxx\r\n 
+            + error string: 首字符以-开头，例-ERR unkown command\r\n
+            + integer: 首字符以：开头， 例 ":13\r\n"
+            + array: 首字符以*开头， 例 *2\r\n+abc\r\n:9\r\n => ["abc", 9]
+        + 客户端发送服务端的类型： 数组  inline command , bulk string组成
+        + 服务端的返回根据客户端请求类型来确定
 
 #### 多机数据库的实现
 + 复制

@@ -1,18 +1,23 @@
-### 读《Redis设计与实现》--黄健宏 简单笔记
+### 读《Redis设计与实现》--黄健宏 简单笔记 http://redisbook.com/
 
 #### 数据结构与对象
-+ 简单动态数组 simple dynamic string SDS
++ 简单动态数组 simple dynamic string SDS (面向对象的code的思想，空间换时间)
+    + sds.h sds.c
     + 数组本身长度， 空余长度
     + 防止strcat 这种缓冲区溢出， o1时间获取字符串长度，减少内存分配，兼容c字符串库函数
 + 链表
     + adlist.h/listNode, list
 + 字典
     + dict.h/dictht, dict
-+ 跳跃表
++ 跳跃表 有序集合的实现
     + redis.h/zskiplistNode, zskiplist
+    + server.h/
 + 整数集合
     + intset.h/intset
 + 压缩列表 ziplist
+    + 组成<zlbytes, zltail, zllen, entry1,entry2,...entryN, zlend>
+    + 整体长度-字节 == 指向tail的偏移量 == entry的个数 == entry... == 标记结尾0xff 一字节
+    + 
 
 + redis未直接使用上述数据结构， 而是redisObject结构进行封装。
     + 键对象， 均为字符串对象
@@ -93,3 +98,23 @@ typedef strcut redisObject {
 + 二进制位数组
 + 慢查询日志 slowlog get
 + 监视器 monitor 命令 客户端变为监视器
+
+
+----
+
++ 应用场景 能解决哪些问题
+    + 排行榜 前200名  zset
+    + 任务列表 list 定时任务 推送
+    + 关注列表 关注列表 粉丝列表
+
++ https://redis.io/
++ redis 关键技术
+
++ 事件循环
++ 过期和逐出
++ 持久化
++ 主从复制
++ pipeline mget
++ redis 集群
++ redis 客户端
++ 延迟删除 & 双机房删除

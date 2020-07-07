@@ -17,7 +17,7 @@
 + 压缩列表 ziplist
     + 组成<zlbytes, zltail, zllen, entry1,entry2,...entryN, zlend>
     + 整体长度-字节 == 指向tail的偏移量 == entry的个数 == entry... == 标记结尾0xff 一字节
-    + 
+    + entry的结构<previous_entry_length, encoding(content的类型), content>
 
 + redis未直接使用上述数据结构， 而是redisObject结构进行封装。
     + 键对象， 均为字符串对象

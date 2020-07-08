@@ -25,6 +25,16 @@
     + 键对象， 均为字符串对象
     + 值对象， 为字符串对象，列表对象(ziplist, linkedlist)，哈希对象(ziplist, hashtable)，集合对象（intset, hashtable），有序集合对象(ziplist, skiplist)
     + redisObject结构体： type, encoding, prt, refcount, lru...
++ 类型的检查和命令的多态
+    + 字符串键： set get append strlen
+    + 列表键： rpush lpop linsert llen
+    + 哈希键： hdel hset hget hlen
+    + 集合键： sadd spop sinter scard
+    + 有序集合键： zadd zcard zrank zscore
+    + 类型的检查， 检查key对应的值类型 与命令是否匹配
+    + 命令的多态
+        + 基于类型的多态 ： 一个命令处理不同类型的键 del expire type
+        + 基于编码encoding的多态： 一个命令处理不同编码方式 例如llen 对于列表键来说，底层为ziplist ,ziplistlen返回长度; 底层为linkedlist, listLength返回长度
 
 ```
 typedef strcut redisObject {

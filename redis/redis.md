@@ -7,8 +7,10 @@
     + 防止strcat 这种缓冲区溢出， o1时间获取字符串长度，减少内存分配，兼容c字符串库函数
 + 链表
     + adlist.h/listNode, list
+    + 列表对象的encoding类型，可以是ziplist或linkedlist
 + 字典
     + dict.h/dictht, dict
+    + 哈希对象的encoding类型，或者说实现方式有ziplist , hashtable
 + 跳跃表 有序集合的实现
     + redis.h/zskiplistNode, zskiplist
     + server.h/
@@ -17,16 +19,16 @@
 + 压缩列表 ziplist
     + 组成<zlbytes, zltail, zllen, entry1,entry2,...entryN, zlend>
     + 整体长度-字节 == 指向tail的偏移量 == entry的个数 == entry... == 标记结尾0xff 一字节
-    + entry的结构<previous_entry_length, encoding(content的类型), content>
+    + entry的结构<previous_entry_length, encoding(content的类型), content>, previous_entry_length 支持从尾到头
 
 + redis未直接使用上述数据结构， 而是redisObject结构进行封装。
     + 键对象， 均为字符串对象
-    + 值对象， 为字符串对象，列表对象，哈希对象，集合对象，有序集合对象
+    + 值对象， 为字符串对象，列表对象(ziplist, linkedlist)，哈希对象(ziplist, hashtable)，集合对象（intset, hashtable），有序集合对象(ziplist, skiplist)
     + redisObject结构体： type, encoding, prt, refcount, lru...
 
 ```
 typedef strcut redisObject {
-    unsigned type:4; // 对象类型
+    unsigned type:4; // 对象类型 string list hash set zset
     unsigned encoding:4; // 实现方式 
     unsigned lru:REDIS_LRU_BITS; // 对象的空转时长
     int refcount;

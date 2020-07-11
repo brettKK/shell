@@ -49,7 +49,8 @@ typedef strcut redisObject {
 
 #### 单机数据库的实现
 + 数据库
-    + redis.h/redisServer, redisDb
+    + redis.h/redisServer（dbnum 数据库数量, redisDb 表示数据库）
+    + redisClient结构体（redisDb 记录客户端正在使用的数据库） select命令切换数据库
     + 过期键删除
         + 懒性删除策略(db.c/expireIfNeeded) get key -> expireIfNeeded -> 删除key 并返回nil
         + 定期删除策略 (redis.c/activeExpireCycle)

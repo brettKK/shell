@@ -51,7 +51,16 @@ typedef strcut redisObject {
 + 数据库
     + redis.h/redisServer（dbnum 数据库数量, redisDb 表示数据库）
     + redisClient结构体（redisDb 记录客户端正在使用的数据库） select命令切换数据库
+    + redisDb结构里（dict字典保存了数据库里所有的kv）
+    + 最好补个图描述上述结构
+    + 设置过期key
+        + expire 设置key的ttl秒， pexpire 设置key的ttl毫秒
+        + expireat 设置key的过期时间 秒，pexpireat 设置key的过期时间 毫秒
+        + 底层均有pexpireat实现
+        + redistDb结构里 expires过期字典，store所有key的过期时间
     + 过期键删除
+        + 定时删除
+            + 创建定时器添加到时间事件的链表中，cpu不友好
         + 懒性删除策略(db.c/expireIfNeeded) get key -> expireIfNeeded -> 删除key 并返回nil
         + 定期删除策略 (redis.c/activeExpireCycle)
         + save 生成rdb文件， 不会保存过期键

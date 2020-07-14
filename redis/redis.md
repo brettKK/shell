@@ -66,7 +66,6 @@ typedef strcut redisObject {
         + save 生成rdb文件， 不会保存过期键
     + 数据库通知
 + RDB持久化
-    + 
 + AOF持久化
 + 事件
     + 文件事件 ae_select.c , ae_epoll.c, ae_kqueue.c reactor模式
@@ -74,9 +73,21 @@ typedef strcut redisObject {
         + 定义为 id， when， timeProc(函数的返回类别 区分 是周期还是定时)
         + 一般情况下 只会有serverCron 一个周期时间事件
 + 客户端
+    + redisClient里的属性来展开  补图
 + 服务端
     + 初始化服务器状态， 载入服务器配置，初始化服务器数据结构，还原数据库配置，执行事件循环
-    + serverCron  默认100ms执行一次。
+    + set命令的执行过程
+        + 客户端发送set命令，转为redis协议格式的内容sending
+        + 服务端读取命令，解析命令和参数
+        + 服务端根据命令名在命令表中找执行命令的实现函数，执行结果写入redisClient的输出缓冲区
+        + 服务端将命令的回复sending给客户端
+    + serverCron  默认100ms执行一次 执行内容
+        + 管理数据库状态信息
+        + 处理sigterm信号
+        + 执行持久化操作
+    + redisServer 初始化
+        + initServerConfig 初始化一般属性
+        + initServer 初始化数据结构
 + 客户端与服务端的交互
     + 交互模式： 
         + 串行的请求/响应 
@@ -103,12 +114,14 @@ typedef strcut redisObject {
     + raft协议 选新主
 + 集群
     + cluster meet ip port 把ip+port加入到cluster中
-    + 16384个槽的分配 moved错误 （请求a到机器上，但机器存放该key对应的槽，所以返回集群中正确的机器地址）  ask错误（刚好负责这个槽，所以暂时无数据的临时措施）
+    + 16384个槽的分配 
+    + moved错误 （请求a到机器上，但机器存放该key对应的槽，所以返回集群中正确的机器地址）  
+    + ask错误（刚好负责这个槽，所以暂时无数据的临时措施）
     + 消息（集群内通过发送和接受消息来通讯 5种类型的消息） cluster.h/clusterMsg, clusterMsgData
-        + meet消息 加入cluster的信号
+        + meet消息 加入cluster的信号 （gossip由meee ping pong 三种消息实现）
         + ping消息 pong消息
         + fail消息 
-        + publish消息 
+        + publish消息
 
 #### 独立功能的实现
 + 发布与订阅

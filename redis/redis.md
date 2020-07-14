@@ -127,13 +127,16 @@ typedef strcut redisObject {
 + 发布与订阅
 + 事务
     + multi, exec, watch
+    + multi之后 的命令入队列， exec执行队列命令。
+    + watch的key被修改后，redisClient的REDIS_DIRTY_CAS会打开， exec时会取消执行
     + redis单线程处理事件，所以事务执行是串行的，所以满足隔离性。
 + lua脚本
 + 排序
 + 二进制位数组
+    + swar , 查表  统计数字中1的个数
 + 慢查询日志 slowlog get
-+ 监视器 monitor 命令 客户端变为监视器
-
++ 监视器 monitor 命令 
+    + 客户端变为监视器 redisClient , REDIS_MONITOR标时被打开
 
 ----
 

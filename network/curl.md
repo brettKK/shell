@@ -1,5 +1,7 @@
 # curl command
 
++ 不带参数 curl  xx.com 发get请求
++ curl -X POST xx.com 发post请求
 + 下载单个文件，print到stdout
 	+ curl baidu.com
 + -o/O 保存下载文件到本地
@@ -31,9 +33,9 @@
 + 可以通过--data/-d方式使用post
 	+ curl -u username --data "param1=value1&param2=value2" github.com
 	+ curl --data @filename github.com 将文件中的数据传给服务器
-+ User Agent
++ User Agent (-A , -H)
 	+ curl --user-agent "user-agent" url
-+ cookie
++ cookie (-b)
 	+ curl --cookie "name=xx" url
 	+ cookie值可以从response header的·Set-Cookie·字段得到
 + 自行加request header信息
@@ -44,6 +46,7 @@
 
 + curl -d '{"key1":"value1", "data":{"data1":"value1", "data2":"value2"}}' 'https://xxx.com/a/b'
 + curl -F 'business_type=one' -F 'data=@/Users/kk/a.csv'  x.x.x.x:xx/a/b curl发送文件
++ curl -G -d 'q=xx' xx.com -d ''//xx.com?q=xx
 
 ---
 + practice
@@ -57,6 +60,8 @@
 	+ 存储server返回的cookie到本地文件
 	+ 使用存储在本地的cookie提交
 	+ 设置请求header
+
++ wget 下载安软软件或者文件
 
 + ping icmp协议 封装在IP包里
 	+ 类型0 8 请求与响应

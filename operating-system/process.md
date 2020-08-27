@@ -80,17 +80,18 @@ fork+exec 创建子进程，执行新程序
 信号signals：
 
 + SIGALRM:  timer time out
-+ SIGABRT： 丢弃执行进程
-+ SIGHUP： 挂起
++ SIGABRT： 丢弃执行进程  调用abort函数生成的信号
++ SIGHUP： 挂起 终端退出时同时在终端运行的进程，不在与终端关联的信息 wget能捕获SIGHUP信号，并忽略它
 + SIGINT: 进程中断， ctrl+C可以产生
 + SIGKILL: 杀死进程， kill -9 pid， 不能忽略 uncatchable
 + SIGTERM: 进程终止， kill pid
 + SIGPIPE: 非法写管道
-+ SIGQUIT： 进程退出，ctrl+\
++ SIGQUIT： 进程退出，ctrl+\  产生coredump文件
 + SIGSTOP: 终止进程， 不能忽略 uncatchable
 + SIGTSTP: 终止进程， ctrl+z
 + SIGCHLD: 当子进程退出时，发送给父进程的信号
 + SIGSEGV: 段错误
++ SIGTRAP： 由断点指令或其它陷阱（trap）指令产生. 由debugger使用
 + 用户自定义信号
 
 kill -l 显示可用的信号

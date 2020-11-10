@@ -23,11 +23,11 @@
     + my very cute animal turns savage in full moon areas
     +  magic,  0xCAFEBABE ，pdf png文件内都有魔数
     +  version, 生成class文件时的java版本
-    +  constant pool, 
-    +  access flag, 
-    +  this class, 
-    +  super class, 
-    +  interface, 
+    +  constant pool,  javap -v Helloworld
+    +  access flag, 2字节 标识一个类为final, abstract, public 之类的
+    +  this class,  确定类的继承关系 指向常量池的索引
+    +  super class, 确定类的继承关系
+    +  interface,   确定类的继承关系
     +  field, 
     +  method, 
     +  attribute

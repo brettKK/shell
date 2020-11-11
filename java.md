@@ -50,5 +50,12 @@
           +  decriptor_index 方法描述符 指向常量池类型为constant_uft8_innfo的字符串常量项，表述(参1的类型，参2的类型...) 返回值类型
           +  attributes_count
           +  attribute_info
-    +  attribute
+    +  attribute 属性表
+       +  attribute_info 
+          +  attribute_name_index 属性名索引 指向常量池的字符串常量
+          +  attribute_length info 数组长度
+          +  info
+             +  ConstantValue属性
+             +  Code属性 重要的部分 包含了方法的字节码
+                +  
 

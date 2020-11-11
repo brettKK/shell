@@ -28,7 +28,27 @@
     +  this class,  确定类的继承关系 指向常量池的索引
     +  super class, 确定类的继承关系
     +  interface,   确定类的继承关系
-    +  field, 
-    +  method, 
+    +  field, 字段表
+       +  变长
+       +  field_info结构 
+          +  access_flags 字段访问标识
+          +  name_index 字段名索引 指向常量池的字符串常量
+          +  descriptor_index  字段类型描述符的索引  引用类型“L;” -> “Ljava/lang/String;” 指向常量池的字符串常量
+          +  attributes_count 属性个数
+          +  attribute_info  属性集合
+             +  ConstantValue
+             +  Synthetic
+             +  Signature
+             +  Deprecated
+             +  Runtime-Visible Annotationns
+             +  Runtime-Invisible Annotations
+    +  method, 类中定义的方法存储在这里
+       +  变长
+       +  method_info
+          +  access_flags
+          +  name_index
+          +  decriptor_index 方法描述符 指向常量池类型为constant_uft8_innfo的字符串常量项，表述(参1的类型，参2的类型...) 返回值类型
+          +  attributes_count
+          +  attribute_info
     +  attribute
 

@@ -19,7 +19,7 @@
 11 APM  分布式跟踪的基本原理 opentracing 无埋点字节码插桩
 12 android dex文件 android字节码于java字节码的区别， gradle字节码改写实现无侵入插桩
 
-1  class文件由十个部分组成
+1  class文件由十个部分组成 javap查看字节码文件
     + my very cute animal turns savage in full moon areas
     +  magic,  0xCAFEBABE ，pdf png文件内都有魔数
     +  version, 生成class文件时的java版本
@@ -59,3 +59,22 @@
              +  Code属性 重要的部分 包含了方法的字节码
                 +  
 
+2 字节码指令
++ switch-case的两种字节码指令的实现
+   + tableswitch , case间隔紧密时使用 o(1)
+   + lookupswitch , case间隔稀疏时使用  o(lgn)
++ try-catch 字节码分析
+   + code属性里有异常表 表项4元组：from, to, target, exception type
+   + 在from,to 范围内的字节码发生指定的exception type时跳转到target字节码的位置
+   + finally 字节码分析
+      + 为什么finally一定执行： javac生成字节码时在try和catch中所有退出之前加入invokevirtual 调用finally里代码块
+      + finally语句中有return语句时，javac生成字节码时会将try 和catch里的return语句的值临时放入局部变量表里，只返回finally里的return语句
++ 对象相关的字节码
+   + <init> 方法 ，类的构造方法，非静态变量的初始化，对象初始化代码块 
+      + 创建对象需要三条指令： new, dup, invokespecial 
+   + <clinit> 类的静态初始化方法 ， 类静态初始化块 静态变量初始化
+      + static {};
+      + new, getstatic, putstatic, invokestatic 触发
+
+3 字节码进阶 （方法调用 反射 invokedynamic 线程同步）
++ 

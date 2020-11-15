@@ -77,4 +77,18 @@
       + new, getstatic, putstatic, invokestatic 触发
 
 3 字节码进阶 （方法调用 反射 invokedynamic 线程同步）
++ 5条方法调用指令的联系和区别 （以invoke开头的指令）
+   + invokestatic 调用static静态方法
+      + 不需要将对象加载到操作数栈上，仅参数入栈，执行invokestatic就行
+   + invokespecial  调用私有实例方法，构造器方法
+   + invokevirtual 调用非私有实例方法
+      + 
+   + invokeinterface 调用接口方法
+   + invokedynamic 调用动态方法
++ JVM方法分配机制与vtable,itable原理
++ HSDB查看jvm运行时数据
++ invokedynamic指令，lambda表达式中的作用
++ 从字节码角度理解范型擦出
++ synchronized 关键字的字节码原理
++ 反射的底层实现原理
 + 

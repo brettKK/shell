@@ -3,14 +3,16 @@ free查看内存使用情况，包含已用内存，可用内存，交换内存�
 ---
 free -t (total, 有汇总行)
 + total = used + free
++ used 包含cached， buffers， shared部分
 + -buffers/cache: used-buffers-cached (可以看出程序吃掉的内存)
 + +buffers/cache: free+buffers+cached （可以挪用的内存）
 ---
 free命令后的buffer与cached的区别
 + buffer缓冲,内存写硬盘时的写缓冲内存
 + cached缓存,数据缓存，读缓存
-
-交换区swap与内存mem的区别：当mem不够用时，使用swap存放不常用的数据
++ cpu-->cache -->mem --> buffer --> disk
++ 交换区swap与内存mem的区别：当mem不够用时，使用swap存放不常用的数据, 把磁盘当做虚拟内存使用
+    + 清理swap， swapoff -a && swapon -a
 
 ---
 

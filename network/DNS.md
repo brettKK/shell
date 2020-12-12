@@ -26,6 +26,8 @@
   + dig @dnsserver name querytype
 
 
++ ping, traceroute, nslookup ==> mtr
+
 
 ```
 + fatal: unable to access 'https://github.com/brettKK/shell.git/': Failed to connect to github.com port 443: Operation timed out

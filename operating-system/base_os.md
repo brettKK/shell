@@ -121,7 +121,10 @@
 	+ lsof -p pid|grep LISTEN
 	+ netstat -nltp |grep pid
 + kill 发信号给进程
-	+ kill -9 pid 	强制杀死进程
+	+ kill -l 查看所有信号类型
+	+ kill -9 pid 	强制杀死进程 SIGKILL
+	+ kill -2  SIGINT  ctrl+c
+	+ kill -15 (kill的默认选项) SIGTREM
 	+ kill -l  中断 正常退出 暂停 继续
 + crontab 定时任务
 	+ crontab	-e file

@@ -65,3 +65,23 @@
 
 active and inactive list LRU
 grep -i active /proc/meminfo
+
+
++ linux 性能调优工具
+	+ CPU Mem disk network
+	+ 综合top htop
+	+ cpu
+		+ vmstat
+		+ uptime
+		+ mpstat
+	+ Mem
+		+ free
+		+ smem
+	+ disk
+		+ iotop
+		+ iostat
+	+ network
+		+ ping
+		+ nslookup
+		+ traceroute
+		+ mtr

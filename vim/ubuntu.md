@@ -55,6 +55,17 @@
 + bundle
 + vimscript
 
++ 重定向
+	+ runApp < data.in > results.out
+	+ > /dev/null 丢弃输出信息
+	+ 2>&1 错误输出重定向到标准输出中
+	+ >> a.log  追加写文件
+	+ &>a.log  将标准输出和错误输出的组合重定向到a.log里
+	+ 单独的 & 将任务发送到shell后台执行
+		+ jobs 列出在后台执行的所有任务
+		+ fg 任务编号 将任务带回前台
+		+ ctrl+z 暂停进程， bg 将任务继续带回后台执行
+
 
 + 查找某个字符串
   + 命令模式:／strings ，光标位置向下查找

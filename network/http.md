@@ -115,7 +115,7 @@ https 流程  涉及到（非对称加密 对称加密 hash算法（MD5获取摘
 + 加密体系
   + 对称加密
     + block cipher 块加密
-      + 分组密码 DES
+      + 分组密码 DES(data encrption standard 美国数据加密标准)
       + IDEA
       + AES
     + stream cipher 流加密
